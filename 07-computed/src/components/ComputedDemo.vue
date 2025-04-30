@@ -47,10 +47,18 @@ export default {
     };
   },
   computed: {
+    // 預設為get
     // 計算商品總數
-    totalQuantity () {
+    // totalQuantity () {
+    //   return this.items.reduce((sum, item) => sum + Number(item.quantity), 0)
+    // },
+    totalQuantity:{
+      get () {
       return this.items.reduce((sum, item) => sum + Number(item.quantity), 0)
+      }
     },
+
+
     // 計算總金額
     totalPrice () {
       return this.items.reduce((sum, item) => {
