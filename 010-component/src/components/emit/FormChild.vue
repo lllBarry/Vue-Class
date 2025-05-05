@@ -1,5 +1,5 @@
 <script setup>
-const emit = defineEmits(['submit'])
+const emit = defineEmits(['submit1'])
 
 const handleSubmit = (event) => {
   event.preventDefault()
@@ -9,7 +9,7 @@ const handleSubmit = (event) => {
     email: formData.get('email')
   }
   const emitData = "emitData"
-  emit('submit', userData, emitData) // 發送事件，並傳遞 userData 和 emitData 多個參數
+  emit('submit1', userData, emitData) // 發送事件，並傳遞 userData 和 emitData 多個參數
 }
 </script>
 
