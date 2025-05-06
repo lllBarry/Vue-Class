@@ -26,13 +26,19 @@ const theme = ref('light')
 
 provide('theme', theme)
 provide('toggleTheme', () => {
-  theme.value = theme.value === 'light' ? 'dark' : 'light'
+  // theme.value = theme.value === 'light' ? 'dark' : 'light'
+
+  if (theme.value === "light"){
+    theme.value = "dark"
+  } else {
+    theme.value = "light"
+  }
+
 })
 
 // === 語言切換 ===
 // 目前語言
 const currentLang = ref('zh')
-
 // 語系資料
 const locales = {
   zh: zhLocale,
